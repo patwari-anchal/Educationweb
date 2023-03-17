@@ -1,0 +1,419 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>   
+        <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    </head>
+    <body onload="window.alert('page is loaded successfully!!!')">
+        <header>
+            <nav>
+                <div class="logo">
+                    <span>EDUCATION</span>
+                    <sup><i class='fa fa-graduation-cap' style='font-size:24px'></i></sup>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="#about">About US</a></li>
+                        <li><a href="#course">Courses</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#contact">Contact us</a></li>
+                    </ul>
+                </div>
+            </nav>
+            
+        </header>
+
+        <section>
+            <div class="midsec">
+                <div class="middle">
+                    <h1>Student's Educational Source</h1>
+                </div>
+            </div>
+        </section>
+
+        <div class="main-sec" id="aboutg">
+        <div class="main">
+            <div class="part1">
+                <h3>Recent News</h3> 
+                <div class="flex-container">
+                    <div class="wrap-1">
+                        <img src="https://www.shutterstock.com/image-photo/innovative-learning-creative-educational-study-260nw-1471288775.jpg">
+                    </div>
+                    <div class="wrap-2">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas porro repudiandae reprehenderit reiciendis, itaque recusandae cum sit ad odio, repellat </p>
+                    </div>
+                </div>  
+                <div class="flex-container-1">
+                    <div class="wrap-1">
+                        <img src="https://www.shutterstock.com/image-photo/innovative-learning-creative-educational-study-260nw-1471288775.jpg">
+                    </div>
+                    <div class="wrap-2">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas porro repudiandae reprehenderit reiciendis, itaque recusandae cum sit ad odio, repellat </p>
+                    </div>
+                </div> 
+                <div class="flex-container">
+                    <div class="wrap-1">
+                        <img src="https://www.shutterstock.com/image-photo/innovative-learning-creative-educational-study-260nw-1471288775.jpg">
+                    </div>
+                    <div class="wrap-2">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas porro repudiandae reprehenderit reiciendis, itaque recusandae cum sit ad odio, repellat </p>
+                    </div>
+                </div>  
+                <div class="flex-container-1">
+                    <div class="wrap-1">
+                        <img src="https://www.shutterstock.com/image-photo/innovative-learning-creative-educational-study-260nw-1471288775.jpg">
+                    </div>
+                    <div class="wrap-2">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas porro repudiandae reprehenderit reiciendis, itaque recusandae cum sit ad odio, repellat </p>
+                    </div>
+                </div>     
+            </div>
+                
+            <div class="part2">
+                <h3>School walkthrough</h3>
+                <div class="internal-part2">
+                    <button><span class="fa fa-play-circle"></span></button>
+                    
+                    <div class="vdo">
+                        
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0E3iyYcjm_yVtEBtF_AiRKr4kOJFwDpkkxw&usqp=CAU">
+                         
+                        
+                    </div>
+                    
+                    <div class="para">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quae nisi mollitia, suscipit quod tempora velit amet deserunt, eum distinctio ab, consectetur debitis vero asperiores fugiat aperiam aut omnis dicta.</p>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="part3">
+                <h3>Recent News</h3>  
+               
+    <div>
+
+        <p id="time">1:20PM</p>
+        <marquee>
+            <p id="day">SUN</p>
+         <p id="date">9 May 2021</p></marquee>
+       
+
+    </div>
+
+    <script type="text/javascript">
+
+        const getCurrentTimeDate = () => {
+        let currentTimeDate = new Date();
+
+        var weekday = new Array(7);
+        weekday[0] = "SUN";
+        weekday[1] = "MON";
+        weekday[2] = "TUE";
+        weekday[3] = "WED";
+        weekday[4] = "THU";
+        weekday[5] = "FRI";
+        weekday[6] = "SAT";
+
+        var month = new Array();
+        month[0] = "JAN";
+        month[1] = "FEB";
+        month[2] = "MAR";
+        month[3] = "APR";
+        month[4] = "May";
+        month[5] = "JUN";
+        month[6] = "JUL";
+        month[7] = "AUG";
+        month[8] = "SEP";
+        month[9] = "OCT";
+        month[10] = "NOV";
+        month[11] = "DEC";
+
+        var hours   =  currentTimeDate.getHours();
+
+        var minutes =  currentTimeDate.getMinutes();
+        var seconds=  currentTimeDate.getSeconds();
+        
+        minutes = minutes < 10 ? '0'+minutes : minutes;
+
+         var AMPM = hours >= 24 ? 'PM' : 'AM';
+
+        if(hours === 24){
+            hours=24;
+
+        }else{
+
+            hours = hours%24;
+
+        }
+
+        var currentTime = `${hours}:${minutes}:${seconds}${AMPM}`;
+        var currentDay = weekday[currentTimeDate.getDay()];
+
+        var currentDate  = currentTimeDate.getDate();
+        var currentMonth = month[currentTimeDate.getMonth()];
+        var CurrentYear = currentTimeDate.getFullYear();
+
+        var fullDate = `${currentDate} ${currentMonth} ${CurrentYear}`;
+
+
+        document.getElementById("time").innerHTML = currentTime;
+        document.getElementById("day").innerHTML = currentDay;
+        document.getElementById("date").innerHTML = fullDate;
+
+        setTimeout(getCurrentTimeDate, 500);
+
+    }
+    getCurrentTimeDate();
+
+    </script>
+
+
+<marquee>Educational resources latest News &nbsp;&nbsp;&nbsp;&nbsp; Educational resources latest News  &nbsp;&nbsp;&nbsp;&nbsp; Educational resources latest News &nbsp;&nbsp;&nbsp;&nbsp;   Educational resources latest News </marquee>
+
+
+
+                   
+                </div> 
+            </div>
+        
+        </div>
+        <div class="wrapper" id="course"    >
+                <div class="heading">
+                    <h1>Popular Courses</h1>
+                </div>
+                <div class="section2">
+                    <div class="items">
+                        <div class="card1">
+                            <div class="heading">
+                                <h2>MEDIA TECH</h2>
+                            </div>
+                            <div class="image">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKnxbbwyunN5AN5tor2Kict_PQrLKsu9TwSg1O3bDUnZi_etf2KBWTAC_wVMXHciaUEpQ&usqp=CAU">
+                            </div>
+                            <div class="para">
+                               
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum qui soluta corrupti, numquam nesciunt provident eaque itaque doloribus eum molestiae? Delectus laboriosam commodi temporibus perspiciatis sint impedit! Sunt, iusto officiis.</p>
+                                
+                                
+                                <div class="pay-link">
+                                    <a href="#">View-detail</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card1">
+                            <div class="heading">
+                                <h2>SOCIAL MEDIA</h2>
+                            </div>
+                            <div class="image">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKnxbbwyunN5AN5tor2Kict_PQrLKsu9TwSg1O3bDUnZi_etf2KBWTAC_wVMXHciaUEpQ&usqp=CAU">
+                            </div>
+                            <div class="para">
+                                
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum qui soluta corrupti, numquam nesciunt provident eaque itaque doloribus eum molestiae? Delectus laboriosam commodi temporibus perspiciatis sint impedit! Sunt, iusto officiis.</p>
+                                
+                                <div class="pay-link">
+                                    <a href="#">View-detail</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card1">
+                            <div class="heading">
+                                <h2>DIGITAL ART</h2>
+                            </div>
+                            <div class="image">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKnxbbwyunN5AN5tor2Kict_PQrLKsu9TwSg1O3bDUnZi_etf2KBWTAC_wVMXHciaUEpQ&usqp=CAU">
+                            </div>
+                            <div class="para">
+                                
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum qui soluta corrupti, numquam nesciunt provident eaque itaque doloribus eum molestiae? Delectus laboriosam commodi temporibus perspiciatis sint impedit! Sunt, iusto officiis.</p>
+                                
+                                <div class="pay-link">
+                                    <a href="#">View-detail</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card1">
+                            <div class="heading">
+                                <h2>WEB DESIGNER</h2>
+                            </div>
+                            <div class="image">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKnxbbwyunN5AN5tor2Kict_PQrLKsu9TwSg1O3bDUnZi_etf2KBWTAC_wVMXHciaUEpQ&usqp=CAU">
+                            </div>
+                            <div class="para">
+                                
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum qui soluta corrupti, numquam nesciunt provident eaque itaque doloribus eum molestiae? Delectus laboriosam commodi temporibus perspiciatis sint impedit! Sunt, iusto officiis.</p>
+                                
+                                <div class="pay-link">
+                                    <a href="#">View-detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+           
+            <div class="wrapper1">
+                <div class="wrapper1-1">
+                    <div class="section3">
+                        <h3>Start your journey to a better life with online practical courses</h3>
+                        <div class="icons">
+                            <div class="icon-1">
+                                <i class="	fa fa-group"></i>
+                            </div>
+                            <div class="paragraph-1">
+                                <h4>Proffessional Trainers</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur blanditiis praesentium eos obcaecati eius? Aperiam cupiditate praesentium sed voluptate reiciendis, consequuntur corporis debitis exercitationem sequi voluptatum laboriosam. Dolor, sed perferendis?</p>
+                            </div>
+                        </div>
+
+                        <div class="icons">
+                            <div class="icon-1">
+                                <i class="	fa fa-group"></i>
+                            </div>
+                            <div class="paragraph-1">
+                                <h4>Proffessional Trainers</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur blanditiis praesentium eos obcaecati eius? Aperiam cupiditate praesentium sed voluptate reiciendis, consequuntur corporis debitis exercitationem sequi voluptatum laboriosam. Dolor, sed perferendis?</p>
+                            </div>
+                        </div>
+                        
+                        <div class="icons">
+                            <div class="icon-1">
+                                <i class="	fa fa-group"></i>
+                            </div>
+                            <div class="paragraph-1">
+                                <h4>Proffessional Trainers</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur blanditiis praesentium eos obcaecati eius? Aperiam cupiditate praesentium sed voluptate reiciendis, consequuntur corporis debitis exercitationem sequi voluptatum laboriosam. Dolor, sed perferendis?</p>
+                            </div>
+                        </div>   
+                    </div>
+                        
+                   
+                    <div class="section3-1">
+                        <div class="section3-1-1">
+                        <div class="side-image">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThYwNq1oWFJoyPALkZ1XMaGnGPLqlbxTy6ZD3diiHLL-73vmR-vVAqaLJnBdKjyDHlv5o&usqp=CAU">    
+                        </div>
+                        <div class="select">
+                            <button type="button" onclick="button()">Log in</button>
+                            <script>
+                                function button(){
+                                    
+                                    prompt("Enter password")
+                                    prompt("Re-Enter password")
+                                    alert("Successfully Registered")
+
+                                }    
+                            </script>
+                        </div>    
+                    </div>
+                </div>
+                </div>
+            </div>
+
+
+
+            <div class="wrapper2" id="contact">
+               
+                <div class="wrapper2-1">
+                    <div class="heading">
+                        <h1>Quick Contact</h1>
+                    </div>
+                   
+                    <form>
+                        
+                        <input type="text" placeholder="Name" onfocus="myfunction(this) "><br><br>
+
+                       
+                        <input type="email"placeholder="Email" onfocus="myfunction(this) "><br><br>
+
+                        
+                        <input type="tel" placeholder="Phone" onfocus="myfunction(this) "><br><br>
+                        
+                        
+                        <select onfocus="myfunction(this) ">
+                            <option>Web design</option>
+                            <option>Web design</option>
+                            <option>Web design</option>
+                            <option>Web design</option>
+                            <option>Web design</option>
+                        </select><br><br>
+
+
+                        <button type="button" onclick="button()">Log in</button>
+                            <script>
+                                function mouseover()   {
+                                    
+                                    prompt("Enter password")
+                                    prompt("Re-Enter password")
+                                    alert("Successfully Registered")
+
+                                }  
+                                  function myfunction(x) {
+                                    x.style.background="white"
+                                  }
+                            </script>
+
+
+                        
+                    </form>
+                </div>
+            </div>
+
+
+        <footer>
+            <div class="aside">
+                 <div class="full-container">
+                        <div class="f-1">
+                            <div class="logo">
+                                <span>EDUCATION</span>
+                                <sup><i class='fa fa-graduation-cap' style='font-size:24px'></i></sup>
+                            </div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, possimus! Aut ipsum tempore officiis sint perspiciatis numquam incidunt fugiat. Nesciunt non magnam inventore aliquam impedit cum cupiditate aperiam, ullam odit.</p> 
+                        </div>
+
+                        <div class="f-2">
+                            <h4>Learning Experience</h4>
+                             <li><i class='fa fa-square'></i><a href="#">Course Preparations</a></li>
+                             <li><i class='fa fa-square'></i></i><a href="#">Course Preparations</a></li>
+                            <li><i class='fa fa-square'></i><a href="#">Course Preparations</a></li>
+                            <li><i class='fa fa-square'></i><a href="#">Course Preparations</a></li>
+                            <li><i class='fa fa-square'></i><a href="#">Course Preparations</a></li>
+                        </div>
+
+                        <div class="f-3">
+                            <h4>Contact with Us</h4>
+                            <div class="f-contact">
+                                <i class="fa fa-mobile"></i>
+                                <li><a>+ 123456723</a></li>    
+                            </div>
+                            <div class="f-contact">
+                                <i class="fa fa-envelope"></i>
+                                <li><a>info@gmail.com</a></li>     
+                            </div>
+                        </div>
+                    </div>
+                <div class="container">
+                    <div class="f-4"> 
+                        <div class="copyright">
+                            <p>© 2020 Education. Designd By Themezhub.</p>
+                        </div>
+                    </div>
+                    <div class="f-5">
+                        <div class="social">
+                            <li><a href="#"><i class="twitter fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fb fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="insta fa fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="linkedin fa fa-linkedin"></i></a></li>
+                        </div>     
+                    </div>
+                    
+                </div>
+            </div>
+        </footer>      
+    </body>
+</html>
